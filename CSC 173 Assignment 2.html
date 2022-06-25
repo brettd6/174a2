@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)file:///D:/Downloads/a2-template%20(1).html -->
+<html xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  <title>CSC 196V  Assignment 2</title>
+  <style>
+* { padding: 0; margin: 0; }
+
+body {
+  margin: 0 auto 0 auto;
+  padding: 0;
+  background-color: #33333f;
+  width: 840px;
+  font-family: "Avenir", "Avenir Next", Helvetica Neue, Arial;
+  font-size: 0.95em;
+}
+
+a, a:visited { text-decoration: none; color: #7533f4; }
+a:hover { text-decoration: underline; color: #f4b014; }
+img, a.img, a:hover.img { border: none; }
+
+img {
+  max-width: 800px;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #492a7c;
+  background-color: inherit;
+  font-weight: normal;
+  padding: 0 0 5px 0;
+  margin: 15px 0 0 0;
+  border: none;
+  clear: right;
+}
+h1 { font-size: 18pt; margin:  5px 0 10px 0; line-height: 28px; }
+h2 { font-size: 14pt; margin: 30px 0 15px 0; letter-spacing: 0.01em; border-bottom: 1px solid #ccc;  line-height: 20px;}
+h3 { font-size: 13pt; }
+h4 { font-size: 12pt; }
+h5 { font-size: 11pt; }
+p { margin: 0 0 10px 0; }
+hr { border: 0px; border-top: 1px solid #ccc; height: 0px; }
+ol { margin: 1em; }
+
+.content {
+  margin: 0;
+  padding: 15px 20px;
+  background-color: #ffffff;
+}
+
+.article {
+  line-height: 1.5em;
+}
+
+.entry  {
+  border-top: 1px solid #ddd;
+  padding-top: 2px;
+  margin-top: 3em;
+}
+  </style>
+</head>
+
+<body>
+<div class="content">
+
+<section>
+  <h1>Assignment 2: Exploratory Data Analysis</h1>
+
+  <p>
+    <strong>Brett Davis, </strong>
+  </p>
+</section>
+
+<section>
+  <h2>Dataset</h2>
+
+  <p>
+    For this assignment we are using data sets from the VAST 2022 Data Challenge.<br>
+    We used the apartment dataset to analyze the cost of rent with regards to occupancy and number of rooms. We also used the job 
+	dataset to check whether the job wages were sufficient for the rental costs. We also took a look at the participants dataset to see if there is any significant correlation between joviality and the other recorded fields of education, age, and having kids.
+  </p>
+
+  <p>
+    The data is available online at:
+    <strong>
+      <a href="https://vast-challenge.github.io/2022/">VAST Challenge 2022</a>
+    </strong>
+  </p>
+</section>
+
+<section>
+  <h2>Initial Analysis Questions</h2>
+  <ol>
+    <li>What is relation between rental costs and apartment size/occupancy?</li>
+    <li>Is Monthly Pay Enough to Keep Rent Less Than 30% of Income?</li>
+    <li>Is average joviality influenced by age, education level, and/or having children?</li>
+  </ol>
+</section>
+
+<section>
+  <h2>Discoveries &amp; Insights</h2>
+
+  <div class="entry">
+    <img src="https://raw.githubusercontent.com/brettd6/174a2/main/rent1.png">
+    <p class="caption">
+    In this chart we have the location, rental cost, and numbers of rooms, here we tried to examine the rental cost of apartments in different locations and do the same thing with the number of 
+	rooms for each location. There are three variables in this chart location of average rental cost and numbers of rooms for the apartments, here we try to see the relation between apartment rental cost and numbers of rooms 
+	with the location of the apartments. What is obvious in this chart is that the average rental cost goes up when the number of rooms goes up, but in some locations is not the case and what we can see is the location has an 
+	important role in shaping the rental cost. One thing that we weren’t expecting to see was the 
+	relation between rental cost and the number of rooms for apartments we expected to see a rise in renal cost when the number of rooms increases but that was not the case in some parts of our charts.
+    </p>
+  </div>
+
+  <div class="entry">
+    <img src="https://raw.githubusercontent.com/brettd6/174a2/main/rent2.png">
+    <p class="caption">
+    In this chart we tried to answer the question for the relation between rental cost and max Occupancy in apartments, as you can see the relation between these two-variable is very high if ones go up the other most likely to go up and vice versa, Here we have 
+	Two variables Max Occupancy and Rental Cost. The output of this chart was not as we expected if the rental cost will go up if the Max occupancy goes up, but what happened here is the 
+	Max Occupancy is not the main factor to change the rental cost. There must be some other factor that also affects rental cost, as is shown in the chart some of the highest values for rental costs are have very low max occupancy value.
+    </p>
+  </div>
+  
+  <div class="entry">
+    <img src="https://raw.githubusercontent.com/brettd6/174a2/main/rentandpay1.png">
+    <p class="caption">With this visualization we wanted to see if the hourly rate of jobs was sufficient in keeping rent as 30% or less of ones income. This visualiation did not take into account more than single earning households. The lowest earning employee is also assumed to be in the lowest rent apartment, which may not actually be the case. As you can see, a majority of jobs provide sufficient pay to maintain rent percentage, but there is small section where pay is not enough.</p>
+  </div>
+
+  <div class="entry">
+    <img src="https://raw.githubusercontent.com/brettd6/174a2/main/rentandpay2.png">
+    <p class="caption">
+    This next visualiztion is a continuation on the previous graph, with the same axis and calculations. However, for this visualization the max occupancy of the apartments was taken into account. This means that if it is a two bedroom or higher apartment then the household is assumed to be dual earning, therefore lowering the required individual pay needed to keep rent below the 30% threshold. Using this metric, every job provided sufficient pay.
+    </p>
+  </div>
+
+  <div class="entry">
+    <img src="https://raw.githubusercontent.com/brettd6/174a2/main/joviality1.png">
+    <p class="caption">
+    This graph was made to explore joviality’s relationship to one's level of education and age. As you can see, no matter the education level or age, average joviality is very erratic and displays no clearly identifiable pattern.
+    </p>
+  </div>
+
+  <div class="entry">
+    <img src="https://raw.githubusercontent.com/brettd6/174a2/main/joviality2.png">
+    <p class="caption">
+    This histogram was made to further explore joviality’s relationship to one's age more precisely and to see if having kids made any difference. This graph gives us a bit more insight by confirming that age and having 
+	children are practically irrelevant to average joviality. It is true that participants with kids have a slightly lower average joviality score, it is such a small difference that it is negligible. 
+    </p>
+  </div>
+
+  <div class="entry">
+    <h3>Summary</h3>
+    <p>
+    Our analysis on apartments shows that rental costs are closely related to number of rooms and locations, but building capacity doesn't seem to play too much of a role.
+	The analysis between rent and pay shows that most residents are being paid enough to keep their cost of rent below 30% of their gross income.
+	The joviality graphs show that joviality is such a subjective classification, and any differences measured based on age, education, or having children can simply be chalked up to margin of error and not represent any significant correlation. 
+    </p>
+  </div>
+</section>
+
+</div>
+
+
+</body></html>
